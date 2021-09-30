@@ -20,13 +20,13 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "clock",
     srcs = ["clock.go"],
     importpath = "github.com/google/simhospital/pkg/clock",
 )
 
 go_test(
-    name = "go_default_test",
+    name = "clock_test",
     srcs = ["clock_test.go"],
-    embed = [":go_default_library"],
+    embed = [":clock"],
 )

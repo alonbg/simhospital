@@ -20,12 +20,12 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "processor",
     srcs = ["config.go"],
     importpath = "github.com/google/simhospital/pkg/processor",
     deps = [
-        "//pkg/config:go_default_library",
-        "//pkg/generator:go_default_library",
-        "//pkg/location:go_default_library",
+        "//pkg/config",
+        "//pkg/generator",
+        "//pkg/location",
     ],
 )

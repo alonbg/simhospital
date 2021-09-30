@@ -20,21 +20,21 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "names",
     srcs = ["names.go"],
     importpath = "github.com/google/simhospital/pkg/generator/names",
     deps = [
-        "//pkg/config:go_default_library",
-        "//pkg/gender:go_default_library",
+        "//pkg/config",
+        "//pkg/gender",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "names_test",
     srcs = ["names_test.go"],
-    embed = [":go_default_library"],
+    embed = [":names"],
     deps = [
-        "//pkg/config:go_default_library",
-        "//pkg/gender:go_default_library",
+        "//pkg/config",
+        "//pkg/gender",
     ],
 )

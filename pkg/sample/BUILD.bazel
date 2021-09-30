@@ -20,13 +20,13 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "sample",
     srcs = ["sample.go"],
     importpath = "github.com/google/simhospital/pkg/sample",
 )
 
 go_test(
-    name = "go_default_test",
+    name = "sample_test",
     srcs = ["sample_test.go"],
-    embed = [":go_default_library"],
+    embed = [":sample"],
 )

@@ -20,29 +20,29 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "simulator_lib",
     srcs = ["simulator.go"],
     importpath = "github.com/google/simhospital/cmd/simulator",
     deps = [
-        "//pkg/config:go_default_library",
-        "//pkg/hl7:go_default_library",
-        "//pkg/hospital:go_default_library",
-        "//pkg/hospital/runner:go_default_library",
-        "//pkg/logging:go_default_library",
-        "//pkg/starter:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
-        "@com_github_sirupsen_logrus//:go_default_library",
+        "//pkg/config",
+        "//pkg/hl7",
+        "//pkg/hospital",
+        "//pkg/hospital/runner",
+        "//pkg/logging",
+        "//pkg/starter",
+        "@com_github_pkg_errors//:errors",
+        "@com_github_sirupsen_logrus//:logrus",
     ],
 )
 
 go_binary(
     name = "simulator",
-    embed = [":go_default_library"],
+    embed = [":simulator_lib"],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "simulator_test",
     srcs = ["simulator_test.go"],
-    embed = [":go_default_library"],
-    deps = ["//pkg/test:go_default_library"],
+    embed = [":simulator_lib"],
+    deps = ["//pkg/test"],
 )

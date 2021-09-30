@@ -16,7 +16,7 @@
 // that log entries contain the proper source of the call. It is required
 // because logging functions compute the source as being the first call frame
 // not within the same package.
-package logging_source_test
+package logging_test
 
 import (
 	"bytes"
@@ -26,8 +26,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/google/simhospital/pkg/logging"
+	"github.com/sirupsen/logrus"
 )
 
 func funcName(v reflect.Value) string {

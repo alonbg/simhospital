@@ -27,8 +27,6 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/Sirupsen/logrus"
-	"google.golang.org/protobuf/testing/protocmp"
 	"github.com/google/simhospital/pkg/generator/header"
 	"github.com/google/simhospital/pkg/hardcoded"
 	"github.com/google/simhospital/pkg/hl7"
@@ -38,8 +36,8 @@ import (
 	"github.com/google/simhospital/pkg/message"
 	"github.com/google/simhospital/pkg/pathway"
 	"github.com/google/simhospital/pkg/processor"
-	"github.com/google/simhospital/pkg/state/persist"
 	"github.com/google/simhospital/pkg/state"
+	"github.com/google/simhospital/pkg/state/persist"
 	"github.com/google/simhospital/pkg/test"
 	"github.com/google/simhospital/pkg/test/testhl7"
 	"github.com/google/simhospital/pkg/test/testhospital"
@@ -47,6 +45,8 @@ import (
 	"github.com/google/simhospital/pkg/test/testmetrics"
 	"github.com/google/simhospital/pkg/test/teststate"
 	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/sirupsen/logrus"
+	"google.golang.org/protobuf/testing/protocmp"
 )
 
 var (

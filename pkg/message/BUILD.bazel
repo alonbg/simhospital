@@ -20,26 +20,26 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "message",
     srcs = ["messages.go"],
     importpath = "github.com/google/simhospital/pkg/message",
     deps = [
-        "//pkg/constants:go_default_library",
-        "//pkg/hl7:go_default_library",
-        "//pkg/ir:go_default_library",
-        "//pkg/logging:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
+        "//pkg/constants",
+        "//pkg/hl7",
+        "//pkg/ir",
+        "//pkg/logging",
+        "@com_github_pkg_errors//:errors",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "message_test",
     srcs = ["messages_test.go"],
-    embed = [":go_default_library"],
+    embed = [":message"],
     deps = [
-        "//pkg/hl7:go_default_library",
-        "//pkg/ir:go_default_library",
-        "//pkg/test/testhl7:go_default_library",
-        "@com_github_google_go_cmp//cmp:go_default_library",
+        "//pkg/hl7",
+        "//pkg/ir",
+        "//pkg/test/testhl7",
+        "@com_github_google_go_cmp//cmp",
     ],
 )

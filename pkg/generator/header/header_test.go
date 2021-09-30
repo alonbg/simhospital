@@ -20,13 +20,13 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/Sirupsen/logrus"
 	"github.com/google/simhospital/pkg/config"
 	"github.com/google/simhospital/pkg/logging"
 	"github.com/google/simhospital/pkg/message"
 	"github.com/google/simhospital/pkg/pathway"
 	"github.com/google/simhospital/pkg/test"
 	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/sirupsen/logrus"
 )
 
 var arbitraryStep = &pathway.Step{Discharge: &pathway.Discharge{}}

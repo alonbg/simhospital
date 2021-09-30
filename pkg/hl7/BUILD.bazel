@@ -20,7 +20,7 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "hl7",
     srcs = [
         "data_types.go",
         "mllp.go",
@@ -31,17 +31,17 @@ go_library(
     ],
     importpath = "github.com/google/simhospital/pkg/hl7",
     deps = [
-        "//pkg/constants:go_default_library",
-        "//pkg/logging:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
-        "@org_golang_x_text//encoding:go_default_library",
-        "@org_golang_x_text//encoding/charmap:go_default_library",
-        "@org_golang_x_text//encoding/unicode:go_default_library",
+        "//pkg/constants",
+        "//pkg/logging",
+        "@com_github_pkg_errors//:errors",
+        "@org_golang_x_text//encoding",
+        "@org_golang_x_text//encoding/charmap",
+        "@org_golang_x_text//encoding/unicode",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "hl7_test",
     srcs = [
         "data_types_test.go",
         "mllp_test.go",
@@ -49,10 +49,10 @@ go_test(
         "rewrite_test.go",
         "sender_test.go",
     ],
-    embed = [":go_default_library"],
+    embed = [":hl7"],
     deps = [
-        "//pkg/test/testwrite:go_default_library",
-        "@com_github_google_go_cmp//cmp:go_default_library",
-        "@org_golang_x_text//encoding/unicode:go_default_library",
+        "//pkg/test/testwrite",
+        "@com_github_google_go_cmp//cmp",
+        "@org_golang_x_text//encoding/unicode",
     ],
 )

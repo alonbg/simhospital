@@ -22,7 +22,7 @@ package(
 exports_files(["LICENSE"])
 
 go_library(
-    name = "go_default_library",
+    name = "test",
     srcs = ["config.go"],
     data = [
         ":data",
@@ -35,7 +35,7 @@ go_library(
         "//configs:third_party",
     ],
     importpath = "github.com/google/simhospital/pkg/test",
-    deps = ["//pkg/config:go_default_library"],
+    deps = ["//pkg/config"],
 )
 
 exports_files(srcs = [

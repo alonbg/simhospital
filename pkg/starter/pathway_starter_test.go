@@ -26,7 +26,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/google/simhospital/pkg/config"
 	"github.com/google/simhospital/pkg/doctor"
 	"github.com/google/simhospital/pkg/hl7"
@@ -42,6 +41,7 @@ import (
 	"github.com/google/simhospital/pkg/test/testhospital"
 	"github.com/google/simhospital/pkg/test/testlocation"
 	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/sirupsen/logrus"
 )
 
 const (

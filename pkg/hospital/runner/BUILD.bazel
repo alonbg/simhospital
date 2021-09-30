@@ -20,32 +20,32 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "runner",
     srcs = ["runner.go"],
     importpath = "github.com/google/simhospital/pkg/hospital/runner",
     deps = [
-        "//pkg/clock:go_default_library",
-        "//pkg/hospital:go_default_library",
-        "//pkg/hospital/runner/authentication:go_default_library",
-        "//pkg/logging:go_default_library",
-        "//pkg/monitoring:go_default_library",
-        "//pkg/rate:go_default_library",
-        "//pkg/starter:go_default_library",
-        "@com_github_gorilla_mux//:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
-        "@org_golang_x_sync//errgroup:go_default_library",
+        "//pkg/clock",
+        "//pkg/hospital",
+        "//pkg/hospital/runner/authentication",
+        "//pkg/logging",
+        "//pkg/monitoring",
+        "//pkg/rate",
+        "//pkg/starter",
+        "@com_github_gorilla_mux//:mux",
+        "@com_github_pkg_errors//:errors",
+        "@org_golang_x_sync//errgroup",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "runner_test",
     srcs = ["runner_test.go"],
-    embed = [":go_default_library"],
     deps = [
-        "//pkg/hl7:go_default_library",
-        "//pkg/hospital:go_default_library",
-        "//pkg/test/testclock:go_default_library",
-        "//pkg/test/testhospital:go_default_library",
-        "//pkg/test/testwrite:go_default_library",
+        ":runner",
+        "//pkg/hl7",
+        "//pkg/hospital",
+        "//pkg/test/testclock",
+        "//pkg/test/testhospital",
+        "//pkg/test/testwrite",
     ],
 )

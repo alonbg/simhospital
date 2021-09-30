@@ -20,35 +20,35 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "hardcoded",
     srcs = ["message.go"],
     importpath = "github.com/google/simhospital/pkg/hardcoded",
     deps = [
-        "//pkg/files:go_default_library",
-        "//pkg/generator/header:go_default_library",
-        "//pkg/hl7:go_default_library",
-        "//pkg/ir:go_default_library",
-        "//pkg/logging:go_default_library",
-        "//pkg/message:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
-        "@in_gopkg_yaml_v2//:go_default_library",
+        "//pkg/files",
+        "//pkg/generator/header",
+        "//pkg/hl7",
+        "//pkg/ir",
+        "//pkg/logging",
+        "//pkg/message",
+        "@com_github_pkg_errors//:errors",
+        "@in_gopkg_yaml_v2//:yaml_v2",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "hardcoded_test",
     srcs = [
         "message_test.go",
         "prod_message_test.go",
     ],
-    embed = [":go_default_library"],
+    embed = [":hardcoded"],
     deps = [
-        "//pkg/generator/header:go_default_library",
-        "//pkg/hl7:go_default_library",
-        "//pkg/ir:go_default_library",
-        "//pkg/message:go_default_library",
-        "//pkg/test:go_default_library",
-        "//pkg/test/testwrite:go_default_library",
-        "@com_github_google_go_cmp//cmp:go_default_library",
+        "//pkg/generator/header",
+        "//pkg/hl7",
+        "//pkg/ir",
+        "//pkg/message",
+        "//pkg/test",
+        "//pkg/test/testwrite",
+        "@com_github_google_go_cmp//cmp",
     ],
 )

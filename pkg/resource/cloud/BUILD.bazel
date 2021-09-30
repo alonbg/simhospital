@@ -20,24 +20,24 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "cloud",
     srcs = ["cloud.go"],
     importpath = "github.com/google/simhospital/pkg/resource/cloud",
     deps = [
-        "//pkg/ir:go_default_library",
-        "//pkg/logging:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
-        "@org_golang_google_api//healthcare/v1:go_default_library",
-        "@org_golang_google_api//option:go_default_library",
+        "//pkg/ir",
+        "//pkg/logging",
+        "@com_github_pkg_errors//:errors",
+        "@org_golang_google_api//healthcare/v1:healthcare",
+        "@org_golang_google_api//option",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "cloud_test",
     srcs = ["cloud_test.go"],
-    embed = [":go_default_library"],
+    embed = [":cloud"],
     deps = [
-        "@com_github_google_go_cmp//cmp:go_default_library",
-        "@org_golang_google_api//option:go_default_library",
+        "@com_github_google_go_cmp//cmp",
+        "@org_golang_google_api//option",
     ],
 )

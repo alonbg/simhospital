@@ -20,13 +20,13 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "text",
     srcs = ["text.go"],
     importpath = "github.com/google/simhospital/pkg/generator/text",
 )
 
 go_test(
-    name = "go_default_test",
+    name = "text_test",
     srcs = ["text_test.go"],
-    embed = [":go_default_library"],
+    embed = [":text"],
 )

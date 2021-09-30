@@ -20,12 +20,12 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "teststate",
     srcs = ["teststate.go"],
     importpath = "github.com/google/simhospital/pkg/test/teststate",
     deps = [
-        "//pkg/state/persist:go_default_library",
-        "@com_github_golang_collections_go_datastructures//queue:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
+        "//pkg/state/persist",
+        "@com_github_golang_collections_go_datastructures//queue",
+        "@com_github_pkg_errors//:errors",
     ],
 )

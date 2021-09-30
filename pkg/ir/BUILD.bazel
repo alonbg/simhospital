@@ -20,18 +20,18 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "ir",
     srcs = ["ir.go"],
     importpath = "github.com/google/simhospital/pkg/ir",
-    deps = ["//pkg/constants:go_default_library"],
+    deps = ["//pkg/constants"],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "ir_test",
     srcs = ["ir_test.go"],
-    embed = [":go_default_library"],
+    embed = [":ir"],
     deps = [
-        "//pkg/constants:go_default_library",
-        "@com_github_google_go_cmp//cmp:go_default_library",
+        "//pkg/constants",
+        "@com_github_google_go_cmp//cmp",
     ],
 )

@@ -20,7 +20,7 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "persist",
     srcs = ["persist.go"],
     importpath = "github.com/google/simhospital/pkg/state/persist",
 )

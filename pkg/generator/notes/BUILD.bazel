@@ -20,29 +20,29 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "notes",
     srcs = ["notes.go"],
     importpath = "github.com/google/simhospital/pkg/generator/notes",
     deps = [
-        "//pkg/config:go_default_library",
-        "//pkg/files:go_default_library",
-        "//pkg/generator/text:go_default_library",
-        "//pkg/ir:go_default_library",
-        "//pkg/pathway:go_default_library",
-        "@com_github_pkg_errors//:go_default_library",
+        "//pkg/config",
+        "//pkg/files",
+        "//pkg/generator/text",
+        "//pkg/ir",
+        "//pkg/pathway",
+        "@com_github_pkg_errors//:errors",
     ],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "notes_test",
     srcs = ["notes_test.go"],
-    embed = [":go_default_library"],
+    embed = [":notes"],
     deps = [
-        "//pkg/config:go_default_library",
-        "//pkg/generator/text:go_default_library",
-        "//pkg/ir:go_default_library",
-        "//pkg/pathway:go_default_library",
-        "//pkg/test/testwrite:go_default_library",
-        "@com_github_google_go_cmp//cmp:go_default_library",
+        "//pkg/config",
+        "//pkg/generator/text",
+        "//pkg/ir",
+        "//pkg/pathway",
+        "//pkg/test/testwrite",
+        "@com_github_google_go_cmp//cmp",
     ],
 )

@@ -20,14 +20,14 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "rate",
     srcs = ["rate_control.go"],
     importpath = "github.com/google/simhospital/pkg/rate",
-    deps = ["//pkg/logging:go_default_library"],
+    deps = ["//pkg/logging"],
 )
 
 go_test(
-    name = "go_default_test",
+    name = "rate_test",
     srcs = ["rate_control_test.go"],
-    embed = [":go_default_library"],
+    embed = [":rate"],
 )

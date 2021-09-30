@@ -20,13 +20,13 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "authentication",
     srcs = ["middleware.go"],
     importpath = "github.com/google/simhospital/pkg/hospital/runner/authentication",
 )
 
 go_test(
-    name = "go_default_test",
+    name = "authentication_test",
     srcs = ["middleware_test.go"],
-    embed = [":go_default_library"],
+    embed = [":authentication"],
 )

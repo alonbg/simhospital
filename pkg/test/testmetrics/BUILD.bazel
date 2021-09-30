@@ -20,13 +20,13 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "testmetrics",
     srcs = ["metrics.go"],
     importpath = "github.com/google/simhospital/pkg/test/testmetrics",
     deps = [
-        "@com_github_google_go_cmp//cmp:go_default_library",
-        "@com_github_prometheus_client_golang//prometheus:go_default_library",
-        "@com_github_prometheus_client_model//go:go_default_library",
-        "@org_golang_google_protobuf//testing/protocmp:go_default_library",
+        "@com_github_google_go_cmp//cmp",
+        "@com_github_prometheus_client_golang//prometheus",
+        "@com_github_prometheus_client_model//go",
+        "@org_golang_google_protobuf//testing/protocmp",
     ],
 )

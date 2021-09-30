@@ -21,11 +21,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/google/simhospital/pkg/config"
 	"github.com/google/simhospital/pkg/logging"
 	"github.com/google/simhospital/pkg/pathway"
 	"github.com/google/simhospital/pkg/test"
+	"github.com/sirupsen/logrus"
 )
 
 func TestMain(m *testing.M) {

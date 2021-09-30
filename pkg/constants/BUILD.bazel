@@ -20,7 +20,7 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "constants",
     srcs = [
         "abnormal_flag.go",
         "encounter_status.go",
@@ -31,7 +31,7 @@ go_library(
 )
 
 go_test(
-    name = "go_default_test",
+    name = "constants_test",
     srcs = ["abnormal_flag_test.go"],
-    embed = [":go_default_library"],
+    embed = [":constants"],
 )

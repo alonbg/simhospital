@@ -20,7 +20,7 @@ package(
 )
 
 go_library(
-    name = "go_default_library",
+    name = "testwrite",
     srcs = ["write.go"],
     importpath = "github.com/google/simhospital/pkg/test/testwrite",
 )
