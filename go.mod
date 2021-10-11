@@ -1,10 +1,11 @@
-module github.com/alonbg/simhospital
+module github.com/google/simhospital
 
 go 1.17
 
 replace github.com/google/simhospital => ./
+
 require (
-	cloud.google.com/go/storage v1.16.0
+	cloud.google.com/go/storage v1.18.0
 	github.com/golang-collections/go-datastructures v0.0.0-20150211160725-59788d5eb259
 	github.com/google/fhir/go v0.0.0-20210908190838-d77f57706c1a
 	github.com/google/go-cmp v0.5.6
@@ -14,7 +15,7 @@ require (
 	github.com/prometheus/client_golang v1.11.0
 	github.com/prometheus/client_model v0.2.0
 	github.com/sirupsen/logrus v1.8.1
-	golang.org/x/net v0.0.0-20210929193557-e81a3d93ecf6
+	golang.org/x/net v0.0.0-20211011170408-caeb26a5c8c0
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/text v0.3.7
 	google.golang.org/api v0.58.0
@@ -24,8 +25,7 @@ require (
 
 require (
 	bitbucket.org/creachadair/stringset v0.0.9 // indirect
-	cloud.google.com/go v0.94.1 // indirect
-	github.com/alonbg/simhospital v0.0.0-20210706085723-1d5f849b9ade // indirect
+	cloud.google.com/go v0.97.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
@@ -42,6 +42,6 @@ require (
 	golang.org/x/sys v0.0.0-20210917161153-d61c044b1678 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20210921142501-181ce0d877f6 // indirect
+	google.golang.org/genproto v0.0.0-20210924002016-3dee208752a0 // indirect
 	google.golang.org/grpc v1.40.0 // indirect
 )
